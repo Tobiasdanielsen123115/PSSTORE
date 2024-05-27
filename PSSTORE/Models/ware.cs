@@ -1,6 +1,8 @@
-﻿namespace PSSTORE.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PSSTORE.Models
 {
-    public class ware
+    public class Ware
     {
         [Key]
         public int Id { get; set; }
