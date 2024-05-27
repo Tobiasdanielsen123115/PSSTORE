@@ -13,7 +13,7 @@ namespace PSSTORE.Models
 
         public double Price { get; set; }
 
-        public byte[] Photo { get; set; }
+        public byte[]? Photo { get; set; }
 
     }
 }
