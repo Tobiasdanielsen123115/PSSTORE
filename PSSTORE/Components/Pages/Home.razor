@@ -1,7 +1,45 @@
 ﻿@page "/"
+@using PSSTORE.Models
+@inject HttpClient Http;
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Ware</PageTitle>
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+@if (wares == null)
+{
+    <p>loading..</p>
+}
+
+<th>
+    
+
+    @foreach(var ware in wares)
+    {
+        <p>
+            @ware.Name
+        </p>
+    }
+
+</th>
+
+
+
+
+
+
+
+
+
+
+
+
+@code{
+
+    private List<Ware> wares = new List<Ware>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        wares = await Http.GetFromJsonAsync<List<Ware>>("api/Wares");
+    }
+
+}
