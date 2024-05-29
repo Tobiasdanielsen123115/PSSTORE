@@ -10,7 +10,7 @@
     <p>loading..</p>
 }
 
-<th>
+<div>
     
 
     @foreach(var ware in wares)
@@ -20,7 +20,7 @@
         </p>
     }
 
-</th>
+</div>
 
 
 
@@ -34,12 +34,20 @@
 
 
 @code{
-
-    private List<Ware> wares = new List<Ware>();
+    private List<Ware> wares = new();
 
     protected override async Task OnInitializedAsync()
     {
-        wares = await Http.GetFromJsonAsync<List<Ware>>("api/Wares");
+        try
+        {
+            wares = await Http.GetFromJsonAsync<List<Ware>>("api/Wares");
+        }
+        catch (Exception ex)
+        {
+            await Console.Out.WriteLineAsync("NÆH INTA TINGA" + ex);
+        }
+
+
     }
 
 }
