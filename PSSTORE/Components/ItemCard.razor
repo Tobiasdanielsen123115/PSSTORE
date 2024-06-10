@@ -1,0 +1,29 @@
+﻿@using PSSTORE.Models
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var ware in wares)
+        {
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="@($"data:image/png;base64,{Convert.ToBase64String(ware.Photo)}")" alt="@ware.Name" />
+                    <div class="card-body">
+                        <h5 class="card-title">@ware.Name</h5>
+                        <p class="card-text">@ware.Description</p>
+                        <p class="card-text"><strong>Price:</strong> @ware.Price</p>
+                        <button style="width:100px">
+                            <img src="/images/shoppingcart.svg" height="20px" width="50px" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public List<Ware>? wares { get; set; }
+
+}
