@@ -38,7 +38,72 @@ namespace PSSTORE.Data
                     Description = "Et æble",
                     Price = 5,
                     Photo = img
-                }
+                },
+                 new Ware
+                 {
+                     Id = 3,
+                     Name = "Playstation 4",
+                     Description = "Den populære konsol fra Sony",
+                     Price = 1000,
+                     Photo = img
+                 },
+                  new Ware
+                  {
+                      Id = 4,
+                      Name = "Playstation 4",
+                      Description = "Den populære konsol fra Sony",
+                      Price = 1000,
+                      Photo = img
+                  },
+                  new Ware
+                  {
+                      Id = 5,
+                      Name = "Playstation 4",
+                      Description = "Den populære konsol fra Sony",
+                      Price = 1000,
+                      Photo = img
+                  },
+                  new Ware
+                  {
+                      Id = 6,
+                      Name = "Playstation 4",
+                      Description = "Den populære konsol fra Sony",
+                      Price = 1000,
+                      Photo = img
+                  },
+                     new Ware
+                     {
+                         Id = 7,
+                         Name = "Playstation 4",
+                         Description = "Den populære konsol fra Sony",
+                         Price = 1000,
+                         Photo = img
+                     },
+                      new Ware
+                      {
+                          Id = 8,
+                          Name = "Playstation 4",
+                          Description = "Den populære konsol fra Sony",
+                          Price = 1000,
+                          Photo = img
+                      },
+                       new Ware
+                       {
+                           Id = 9,
+                           Name = "Playstation 4",
+                           Description = "Den populære konsol fra Sony",
+                           Price = 1000,
+                           Photo = img
+                       },
+                        new Ware
+                        {
+                            Id = 10,
+                            Name = "Playstation 4",
+                            Description = "Den populære konsol fra Sony",
+                            Price = 1000,
+                            Photo = img
+                        }
+
                 );
             base.OnModelCreating(builder); // -> https://stackoverflow.com/questions/40703615/the-entity-type-identityuserloginstring-requires-a-primary-key-to-be-defined
         }

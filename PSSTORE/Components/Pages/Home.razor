@@ -14,7 +14,7 @@
     <div class="row">
         @foreach (var ware in wares)
         {
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card mb-4">
                     <img class="card-img-top" src="@($"data:image/png;base64,{Convert.ToBase64String(ware.Photo)}")" alt="@ware.Name" />
                     <div class="card-body">
@@ -30,16 +30,6 @@
         }
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 @code{
