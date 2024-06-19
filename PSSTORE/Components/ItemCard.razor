@@ -1,5 +1,5 @@
 ﻿@using PSSTORE.Models
-
+@inject NavigationManager Navigation
 
 <div class="container">
     <div class="row">
@@ -12,9 +12,12 @@
                         <h5 class="card-title">@ware.Name</h5>
                         <p class="card-text">@ware.Description</p>
                         <p class="card-text"><strong>Price:</strong> @ware.Price</p>
-                        <button style="width:100px">
-                            <img src="/images/shoppingcart.svg" height="20px" width="50px" />
-                        </button>
+
+                        <NavLink class="nav-link" href="@($"details/{ware.Id}")">
+                            <button style="width:100px">
+                                <img src="/images/shoppingcart.svg" height="20px" width="50px" />
+                            </button>
+                        </NavLink>
                     </div>
                 </div>
             </div>
